@@ -44,5 +44,5 @@ success, errors, param = ipm.validate_ip(module_name=module_name)
 
 if success:
     result = ipm.generate_ip(module_name=module_name)
-    projectxml.add_ip(module_name=module_name)
+    projectxml.add_ip(module_name=module_name, sysVerilog={{ top_level_sys_verilog }})
     projectxml.save()
